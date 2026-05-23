@@ -1,0 +1,183 @@
+/* ═══════════════════════════════════════════════════════
+   DIMAS MAYONI PORTFOLIO — style.css
+   Custom styles & overrides (Tailwind CDN handles utilities)
+═══════════════════════════════════════════════════════ */
+
+/* ── Base ─────────────────────────────────────────── */
+* {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+/* ── Scrollbar ────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(52, 211, 153, 0.35);
+  border-radius: 99px;
+}
+
+/* ── Gradient Text ────────────────────────────────── */
+.grad-text {
+  background: linear-gradient(135deg, #6ee7b7, #34d399, #2dd4bf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.dark .grad-text {
+  background: linear-gradient(135deg, #6ee7b7, #34d399, #2dd4bf);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+html:not(.dark) .grad-text {
+  background: linear-gradient(135deg, #059669, #0d9488, #0891b2);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* ── BG Grid ──────────────────────────────────────── */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(52, 211, 153, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(52, 211, 153, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+html:not(.dark) .bg-grid {
+  background-image:
+    linear-gradient(rgba(5, 150, 105, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(5, 150, 105, 0.05) 1px, transparent 1px);
+}
+
+/* ── Glass Card ───────────────────────────────────── */
+.glass {
+  background: rgba(15, 30, 25, 0.55);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(52, 211, 153, 0.12);
+}
+html:not(.dark) .glass {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(5, 150, 105, 0.15);
+}
+
+/* ── Noise Overlay ────────────────────────────────── */
+.noise::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.55;
+}
+
+/* ── Scroll Reveal ────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Skill Progress Bar ───────────────────────────── */
+.bar-fill {
+  width: 0;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+}
+.bar-active .bar-fill {
+  width: var(--w);
+}
+
+/* ── Skill Tab Panel ──────────────────────────────── */
+.tab-panel {
+  display: none;
+}
+.tab-panel.active {
+  display: grid;
+}
+
+/* ── Navbar Shadow on Scroll ──────────────────────── */
+.navbar-scrolled {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* ── Hero Photo Rings ─────────────────────────────── */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.ring1 {
+  animation: spin 22s linear infinite;
+}
+.ring2 {
+  animation: spin 16s linear infinite reverse;
+}
+
+/* ── Hero Float Cards ─────────────────────────────── */
+.fc1 {
+  animation: float 4s ease-in-out infinite;
+}
+.fc2 {
+  animation: float 5s ease-in-out infinite 1.5s;
+}
+
+/* ── Code Block Token Colors ──────────────────────── */
+.t-key {
+  color: #f472b6;
+}
+.t-val {
+  color: #6ee7b7;
+}
+.t-brac {
+  color: #94a3b8;
+}
+
+/* ── Comment Item Fade-in ─────────────────────────── */
+.comment-item {
+  animation: fadeUp 0.3s ease;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ── Blob Blur ────────────────────────────────────── */
+.blob {
+  filter: blur(80px);
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+/* ── Light Mode Base ──────────────────────────────── */
+html:not(.dark) body {
+  background-color: #f0fdf9;
+  color: #0f172a;
+}
+html:not(.dark) .dark\:bg-slate-950 {
+  background-color: #f0fdf9 !important;
+}
+
+/* ── Active Nav Link ──────────────────────────────── */
+.nl.active {
+  color: #34d399;
+}
+html:not(.dark) .nl.active {
+  color: #059669;
+}
