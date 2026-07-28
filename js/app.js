@@ -17,20 +17,21 @@ $(function () {
 
   function applyTheme(t) {
     if (t === "light") {
-      $html.removeClass("dark");
+      $html.removeClass("dark").addClass("light");
       $("#themeIcon, #themeIconMob").removeClass("bx-moon").addClass("bx-sun");
       $("#themeLabelMob").text("Light mode");
     } else {
-      $html.addClass("dark");
+      $html.addClass("dark").removeClass("light");
       $("#themeIcon, #themeIconMob").removeClass("bx-sun").addClass("bx-moon");
       $("#themeLabelMob").text("Dark mode");
     }
   }
 
-  // ── Navbar border on scroll ────────────────
+  // ── Navbar scroll ──────────────────────────
   $(window).on("scroll.nav", function () {
-    $("#navbar").toggleClass("shadow-sm", $(this).scrollTop() > 10);
+    $("#navbar").toggleClass("scrolled", $(this).scrollTop() > 20);
   });
+  $(window).trigger("scroll.nav");
 
   // ── Hamburger ─────────────────────────────
   $("#hamburger").on("click", function () {
