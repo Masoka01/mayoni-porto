@@ -101,6 +101,14 @@
 }
 
 /* ── Hero ──────────────────────────────────── */
+.hero-fade {
+  animation: heroFadeIn 0.8s ease forwards;
+}
+@keyframes heroFadeIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
+
 .hero-grid {
   position: relative;
 }
@@ -676,7 +684,30 @@
   border-color: #fecaca;
 }
 
-.loading-comments,
+.loading-comments {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem 0;
+}
+.skeleton-line {
+  height: 12px;
+  border-radius: 6px;
+  background: #292524;
+  animation: skelPulse 1.5s ease-in-out infinite;
+}
+.light .skeleton-line {
+  background: #e7e5e4;
+}
+.skeleton-line:nth-child(1) { width: 35%; }
+.skeleton-line:nth-child(2) { width: 85%; }
+.skeleton-line:nth-child(3) { width: 65%; }
+.skeleton-line:nth-child(4) { width: 90%; }
+@keyframes skelPulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
 .empty-comments {
   display: flex;
   align-items: center;

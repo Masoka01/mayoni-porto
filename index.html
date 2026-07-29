@@ -11,32 +11,17 @@
     />
     <meta property="og:url" content="https://dimas-mayoni-2026-tau.vercel.app/" />
     <meta property="og:image" content="https://i.imgur.com/3g7hYNB.jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Dimas Mayoni — Web Developer" />
+    <meta
+      name="twitter:description"
+      content="Membangun antarmuka web yang responsif, modern, dan interaktif."
+    />
+    <meta name="twitter:image" content="https://i.imgur.com/3g7hYNB.jpeg" />
     <link rel="icon" type="image/png" sizes="96x96" href="img/96.png" />
 
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            fontFamily: {
-              head: ['"Outfit"', "sans-serif"],
-              body: ['"Inter"', "sans-serif"],
-              mono: ['"Source Code Pro"', "monospace"],
-            },
-            colors: {
-              ink: "#0a0a0a",
-              paper: "#F9F6F0",
-              dim: "#f5f5f4",
-              accent: "#4F46E5",
-              "accent-light": "#EEF2FF",
-              muted: "#78716c",
-            },
-          },
-        },
-      };
-    </script>
+    <!-- Tailwind (production build) -->
+    <link rel="stylesheet" href="css/tailwind.css" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -122,31 +107,33 @@
     <section id="home" class="min-h-screen flex items-center px-5 pt-20 hero-grid">
       <div class="max-w-6xl mx-auto w-full">
         <div class="grid md:grid-cols-[1fr_auto] gap-16 items-center">
-          <div>
+            <div>
             <div
-              class="inline-flex items-center gap-2 text-xs font-mono font-medium text-orange-600 dark:text-orange-400 bg-orange-100 dark:bg-orange-950/30 border border-orange-300 dark:border-orange-800/40 rounded-full px-3 py-1.5 mb-6"
+              class="inline-flex items-center gap-2 text-xs font-mono font-medium text-orange-600 dark:text-orange-400 bg-orange-100 dark:bg-orange-950/30 border border-orange-300 dark:border-orange-800/40 rounded-full px-3 py-1.5 mb-6 hero-fade"
+              style="animation-delay: 0s"
             >
               <span class="w-1.5 h-1.5 rounded-full bg-orange-500 pulse-dot-orange"></span>
               Available for work
             </div>
 
             <h1
-              class="font-head text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-3"
+              class="font-head text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-3 hero-fade"
+              style="animation-delay: 0.1s"
             >
               Dimas<br />
               <span class="gradient-text">Mayoni</span>
             </h1>
 
-            <p class="font-mono text-sm text-stone-500 mb-6">
+            <p class="font-mono text-sm text-stone-500 mb-6 hero-fade" style="animation-delay: 0.2s">
               $ web developer &amp; ui enthusiast
             </p>
 
-            <p class="text-stone-400 leading-relaxed max-w-lg mb-10">
+            <p class="text-stone-400 leading-relaxed max-w-lg mb-10 hero-fade" style="animation-delay: 0.3s">
               Membangun antarmuka web yang responsif, modern, dan interaktif
               dengan fokus pada pengalaman pengguna.
             </p>
 
-            <div class="flex flex-wrap gap-3 mb-12">
+            <div class="flex flex-wrap gap-3 mb-12 hero-fade" style="animation-delay: 0.4s">
               <a href="pdf/CV.pdf" download class="btn-primary">
                 <i class="bx bx-download"></i> Download CV
               </a>
@@ -155,7 +142,7 @@
               </a>
             </div>
 
-            <div class="flex flex-wrap gap-2">
+            <div class="flex flex-wrap gap-2 hero-fade" style="animation-delay: 0.5s">
               <span class="tech-chip"><i class="bx bxl-html5" style="color:#06B6D4"></i> HTML5</span>
               <span class="tech-chip"><i class="bx bxl-css3" style="color:#06B6D4"></i> CSS3</span>
               <span class="tech-chip"><i class="bx bxl-javascript" style="color:#06B6D4"></i> JavaScript</span>
@@ -337,6 +324,7 @@
             <div class="proj-thumb">
               <img
                 src="img/1.webp"
+                loading="lazy"
                 alt="Curriculum Vitae"
                 onerror="
                   this.style.display = 'none';
@@ -368,6 +356,7 @@
             <div class="proj-thumb">
               <img
                 src="img/2.webp"
+                loading="lazy"
                 alt="Louwes Store"
                 onerror="
                   this.style.display = 'none';
@@ -399,6 +388,7 @@
             <div class="proj-thumb">
               <img
                 src="img/3.webp"
+                loading="lazy"
                 alt="IDX Technical Analyzer"
                 onerror="
                   this.style.display = 'none';
@@ -430,6 +420,7 @@
             <div class="proj-thumb">
               <img
                 src="img/4.webp"
+                loading="lazy"
                 alt="Admin Dashboard"
                 onerror="
                   this.style.display = 'none';
@@ -464,6 +455,7 @@
             <div class="proj-thumb">
               <img
                 src="img/5.webp"
+                loading="lazy"
                 alt="Mayoni.Code"
                 onerror="
                   this.style.display = 'none';
@@ -495,6 +487,7 @@
             <div class="proj-thumb">
               <img
                 src="img/6.webp"
+                loading="lazy"
                 alt="BrandDash"
                 onerror="
                   this.style.display = 'none';
@@ -526,6 +519,7 @@
             <div class="proj-thumb">
               <img
                 src="img/7.webp"
+                loading="lazy"
                 alt="MayNote"
                 onerror="
                   this.style.display = 'none';
@@ -555,6 +549,7 @@
             <div class="proj-thumb">
               <img
                 src="img/8.webp"
+                loading="lazy"
                 alt="Anestesi Lab"
                 onerror="
                   this.style.display = 'none';
@@ -693,8 +688,10 @@
                 </p>
                 <div id="commentsList">
                   <div class="loading-comments">
-                    <i class="bx bx-loader-circle bx-spin"></i>
-                    <span>Memuat...</span>
+                    <div class="skeleton-line"></div>
+                    <div class="skeleton-line"></div>
+                    <div class="skeleton-line"></div>
+                    <div class="skeleton-line"></div>
                   </div>
                 </div>
               </div>
@@ -721,8 +718,6 @@
       </div>
     </footer>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <!-- Firebase Comment -->
     <script type="module" src="js/comment.js"></script>
     <!-- App JS -->

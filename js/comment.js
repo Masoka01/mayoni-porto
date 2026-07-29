@@ -80,11 +80,13 @@ function showStatus(message, type) {
 
 // Fungsi untuk memuat komentar dari Firebase
 function loadComments() {
-  // Tampilkan loading state
+  // Tampilkan skeleton loading
   commentsList.innerHTML = `
     <div class="loading-comments">
-      <i class='bx bx-loader-circle bx-spin'></i>
-      <span>Memuat komentar...</span>
+      <div class="skeleton-line"></div>
+      <div class="skeleton-line"></div>
+      <div class="skeleton-line"></div>
+      <div class="skeleton-line"></div>
     </div>
   `;
 

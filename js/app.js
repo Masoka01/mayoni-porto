@@ -1,74 +1,98 @@
 /* ═══════════════════════════════════════════════
    MAYONI PORTFOLIO — app.js
-   jQuery: theme, navbar, tabs, reveal, scroll
+   Vanilla JS: theme, navbar, reveal, scroll
 ═══════════════════════════════════════════════ */
 
-$(function () {
-  const $html = $("html");
+document.addEventListener("DOMContentLoaded", function () {
+  const html = document.documentElement;
 
   // ── Theme ──────────────────────────────────
-  applyTheme(localStorage.getItem("porto-theme") || "dark");
-
-  $("#themeToggle, #themeToggleMob").on("click", function () {
-    const next = $html.hasClass("dark") ? "light" : "dark";
-    applyTheme(next);
-    localStorage.setItem("porto-theme", next);
-  });
-
   function applyTheme(t) {
     if (t === "light") {
-      $html.removeClass("dark").addClass("light");
-      $("#themeIcon, #themeIconMob").removeClass("bx-moon").addClass("bx-sun");
-      $("#themeLabelMob").text("Light mode");
+      html.classList.remove("dark");
+      html.classList.add("light");
+      document.querySelectorAll("#themeIcon, #themeIconMob").forEach((el) => {
+        el.classList.remove("bx-moon");
+        el.classList.add("bx-sun");
+      });
+      const label = document.getElementById("themeLabelMob");
+      if (label) label.textContent = "Light mode";
     } else {
-      $html.addClass("dark").removeClass("light");
-      $("#themeIcon, #themeIconMob").removeClass("bx-sun").addClass("bx-moon");
-      $("#themeLabelMob").text("Dark mode");
+      html.classList.add("dark");
+      html.classList.remove("light");
+      document.querySelectorAll("#themeIcon, #themeIconMob").forEach((el) => {
+        el.classList.remove("bx-sun");
+        el.classList.add("bx-moon");
+      });
+      const label = document.getElementById("themeLabelMob");
+      if (label) label.textContent = "Dark mode";
     }
   }
 
-  // ── Navbar scroll ──────────────────────────
-  $(window).on("scroll.nav", function () {
-    $("#navbar").toggleClass("scrolled", $(this).scrollTop() > 20);
+  applyTheme(localStorage.getItem("porto-theme") || "dark");
+
+  document.querySelectorAll("#themeToggle, #themeToggleMob").forEach((btn) => {
+    btn.addEventListener("click", function () {
+      const next = html.classList.contains("dark") ? "light" : "dark";
+      applyTheme(next);
+      localStorage.setItem("porto-theme", next);
+    });
   });
-  $(window).trigger("scroll.nav");
+
+  // ── Navbar scroll ──────────────────────────
+  function updateNavbar() {
+    const navbar = document.getElementById("navbar");
+    if (navbar) navbar.classList.toggle("scrolled", window.scrollY > 20);
+  }
+  window.addEventListener("scroll", updateNavbar);
+  updateNavbar(); // initial check
 
   // ── Hamburger ─────────────────────────────
-  $("#hamburger").on("click", function () {
-    $(this).toggleClass("open");
-    $("#mobileNav").toggleClass("hidden flex");
-  });
-  $("#mobileNav .nl-mob").on("click", function () {
-    $("#hamburger").removeClass("open");
-    $("#mobileNav").addClass("hidden").removeClass("flex");
-  });
+  const hamburger = document.getElementById("hamburger");
+  const mobileNav = document.getElementById("mobileNav");
+
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener("click", function () {
+      this.classList.toggle("open");
+      mobileNav.classList.toggle("hidden");
+      mobileNav.classList.toggle("flex");
+    });
+
+    document.querySelectorAll("#mobileNav .nl-mob").forEach((link) => {
+      link.addEventListener("click", function () {
+        hamburger.classList.remove("open");
+        mobileNav.classList.add("hidden");
+        mobileNav.classList.remove("flex");
+      });
+    });
+  }
 
   // ── Active nav on scroll ───────────────────
-  $(window).on("scroll.active", function () {
+  function updateActiveNav() {
     let cur = "";
-    $("section[id]").each(function () {
-      if ($(window).scrollTop() >= $(this).offset().top - 120)
-        cur = $(this).attr("id");
+    document.querySelectorAll("section[id]").forEach(function (section) {
+      if (window.scrollY >= section.offsetTop - 120) cur = section.id;
     });
-    $(".nl")
-      .removeClass("active")
-      .filter('[href="#' + cur + '"]')
-      .addClass("active");
-  });
+    document.querySelectorAll(".nl").forEach(function (link) {
+      link.classList.toggle("active", link.getAttribute("href") === "#" + cur);
+    });
+  }
+  window.addEventListener("scroll", updateActiveNav);
+  updateActiveNav();
 
   // ── Scroll Reveal ──────────────────────────
   const revObs = new IntersectionObserver(
     function (entries) {
       entries.forEach(function (e) {
         if (e.isIntersecting) {
-          $(e.target).addClass("visible");
+          e.target.classList.add("visible");
           revObs.unobserve(e.target);
         }
       });
     },
     { threshold: 0.08 },
   );
-  $(".reveal").each(function () {
-    revObs.observe(this);
+  document.querySelectorAll(".reveal").forEach(function (el) {
+    revObs.observe(el);
   });
 });
