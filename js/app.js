@@ -95,4 +95,18 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".reveal").forEach(function (el) {
     revObs.observe(el);
   });
+
+  // ── Back to Top ────────────────────────────
+  (function() {
+    const btn = document.getElementById("backToTop");
+    if (!btn) return;
+    function updateBtn() {
+      btn.classList.toggle("visible", window.scrollY > 300);
+    }
+    window.addEventListener("scroll", updateBtn);
+    updateBtn();
+    btn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  })();
 });
