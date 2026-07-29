@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ── Theme ──────────────────────────────────
   function applyTheme(t) {
+    html.dataset.theme = t;
     if (t === "light") {
       html.classList.remove("dark");
       html.classList.add("light");
