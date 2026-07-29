@@ -120,4 +120,38 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   });
+
+  // ── Stat Counter ───────────────────────────
+  (function() {
+    const counters = document.querySelectorAll(".stat-num");
+    if (!counters.length) return;
+
+    const counterObs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (!e.isIntersecting) return;
+        const el = e.target;
+        const target = parseInt(el.dataset.target, 10);
+        const suffix = el.dataset.suffix || "";
+        const duration = 1500;
+        const start = performance.now();
+
+        function tick(now) {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const current = Math.round(eased * target);
+          el.textContent = current + suffix;
+          if (progress < 1) {
+            requestAnimationFrame(tick);
+          } else {
+            el.textContent = target + suffix;
+          }
+        }
+        requestAnimationFrame(tick);
+        counterObs.unobserve(el);
+      });
+    }, { threshold: 0.5 });
+
+    counters.forEach(function(el) { counterObs.observe(el); });
+  })();
 });
