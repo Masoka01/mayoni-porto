@@ -109,4 +109,15 @@ document.addEventListener("DOMContentLoaded", function () {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
   })();
+
+  // ── Image blur-up ──────────────────────────
+  document.querySelectorAll(".proj-thumb img").forEach(function (img) {
+    if (img.complete) {
+      img.classList.add("loaded");
+    } else {
+      img.addEventListener("load", function () {
+        img.classList.add("loaded");
+      });
+    }
+  });
 });
