@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="id" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>404 — Halaman Tidak Ditemukan | Dimas Mayoni</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Inter:wght@400;500;600&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #a8a29e;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.light {
+      background: #F9F6F0;
+      color: #78716c;
+    }
+    .logo {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.875rem;
+      color: #57534e;
+      margin-bottom: 2rem;
+    }
+    .logo span { color: #06B6D4; }
+    .code { font-size: 6rem; font-weight: 800; font-family: 'Outfit', sans-serif; line-height: 1; }
+    .code span { background: linear-gradient(135deg, #4F46E5, #06B6D4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .msg { font-size: 1rem; margin: 1rem 0 2rem; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #fff;
+      background: #4F46E5;
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn:hover { background: #4338CA; transform: translateY(-2px); }
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 0.5rem;
+      border: 1px solid #292524;
+      background: transparent;
+      color: #a8a29e;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    body.light .theme-toggle {
+      border-color: #e7e5e4;
+      color: #57534e;
+    }
+    .theme-toggle:hover { border-color: #4F46E5; color: #818CF8; }
+    .status { font-family: 'Source Code Pro', monospace; font-size: 0.75rem; color: #57534e; margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+    <i class="bx bx-moon"></i>
+  </button>
+  <p class="logo">mayoni<span>_</span></p>
+  <p class="status">// status_404</p>
+  <p class="code"><span>404</span></p>
+  <p class="msg">Halaman yang kamu cari tidak ditemukan.</p>
+  <a href="/" class="btn"><i class="bx bx-arrow-back"></i> Kembali ke Beranda</a>
+
+  <script>
+    const html = document.documentElement;
+    const toggle = document.getElementById('themeToggle');
+    const icon = toggle.querySelector('i');
+    const saved = localStorage.getItem('porto-theme');
+    if (saved === 'light') {
+      html.classList.remove('dark');
+      document.body.classList.add('light');
+      icon.classList.replace('bx-moon', 'bx-sun');
+    }
+    toggle.addEventListener('click', function() {
+      const isDark = html.classList.contains('dark');
+      html.classList.toggle('dark', !isDark);
+      document.body.classList.toggle('light', isDark);
+      icon.classList.replace(isDark ? 'bx-moon' : 'bx-sun', isDark ? 'bx-sun' : 'bx-moon');
+      localStorage.setItem('porto-theme', isDark ? 'light' : 'dark');
+    });
+  </script>
+</body>
+</html>
