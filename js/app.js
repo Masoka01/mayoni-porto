@@ -154,4 +154,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
     counters.forEach(function(el) { counterObs.observe(el); });
   })();
+
+  // ── Project Filter ─────────────────────────
+  (function() {
+    const filterBar = document.querySelector(".filter-bar");
+    if (!filterBar) return;
+    const btns = filterBar.querySelectorAll(".filter-btn");
+    const cards = document.querySelectorAll(".proj-card");
+
+    btns.forEach(function(btn) {
+      btn.addEventListener("click", function() {
+        btns.forEach(function(b) { b.classList.remove("active"); });
+        btn.classList.add("active");
+
+        const filter = btn.dataset.filter;
+        cards.forEach(function(card) {
+          const cats = card.dataset.category || "";
+          const match = filter === "all" || cats.split(" ").indexOf(filter) !== -1;
+          card.style.display = match ? "" : "none";
+          // re-trigger reveal animation
+          if (match) {
+            card.classList.remove("visible");
+            requestAnimationFrame(function() {
+              card.classList.add("visible");
+            });
+          }
+        });
+      });
+    });
+  })();
 });

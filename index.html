@@ -334,9 +334,17 @@
         <div class="sec-label reveal">Work</div>
         <h2 class="sec-title reveal">Recent Projects</h2>
 
+        <div class="filter-bar reveal">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="dashboard">Dashboard</button>
+          <button class="filter-btn" data-filter="landing">Landing</button>
+          <button class="filter-btn" data-filter="private">Private</button>
+        </div>
+
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
           <!-- Card 1 — Featured -->
-          <div class="proj-card reveal group">
+          <div class="proj-card reveal group" data-category="web">
             <div class="proj-thumb">
               <img
                 src="img/1.webp"
@@ -368,7 +376,7 @@
           </div>
 
           <!-- Card 2 -->
-          <div class="proj-card reveal group" style="--d: 0.05s">
+          <div class="proj-card reveal group" style="--d: 0.05s" data-category="web">
             <div class="proj-thumb">
               <img
                 src="img/2.webp"
@@ -400,7 +408,7 @@
           </div>
 
           <!-- Card 3 -->
-          <div class="proj-card reveal group" style="--d: 0.1s">
+          <div class="proj-card reveal group" style="--d: 0.1s" data-category="web">
             <div class="proj-thumb">
               <img
                 src="img/3.webp"
@@ -432,7 +440,7 @@
           </div>
 
           <!-- Card 4 — Private -->
-          <div class="proj-card reveal group" style="--d: 0.15s">
+          <div class="proj-card reveal group" style="--d: 0.15s" data-category="dashboard private">
             <div class="proj-thumb">
               <img
                 src="img/4.webp"
@@ -467,7 +475,7 @@
           </div>
 
           <!-- Card 5 -->
-          <div class="proj-card reveal group" style="--d: 0.2s">
+          <div class="proj-card reveal group" style="--d: 0.2s" data-category="web landing">
             <div class="proj-thumb">
               <img
                 src="img/5.webp"
@@ -499,7 +507,7 @@
           </div>
 
           <!-- Card 6 -->
-          <div class="proj-card reveal group" style="--d: 0.25s">
+          <div class="proj-card reveal group" style="--d: 0.25s" data-category="dashboard">
             <div class="proj-thumb">
               <img
                 src="img/6.webp"
@@ -531,7 +539,7 @@
           </div>
 
           <!-- Card 7 -->
-          <div class="proj-card reveal group" style="--d: 0.3s">
+          <div class="proj-card reveal group" style="--d: 0.3s" data-category="web">
             <div class="proj-thumb">
               <img
                 src="img/7.webp"
@@ -561,7 +569,7 @@
           </div>
 
           <!-- Card 8 — Private -->
-          <div class="proj-card reveal group" style="--d: 0.35s">
+          <div class="proj-card reveal group" style="--d: 0.35s" data-category="web private">
             <div class="proj-thumb">
               <img
                 src="img/8.webp"
