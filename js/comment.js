@@ -174,6 +174,14 @@ commentForm.addEventListener("submit", async (e) => {
 
   const name = nameInput.value.trim();
   const message = messageInput.value.trim();
+  const honeypot = document.getElementById("hpField");
+
+  // Honeypot: bot biasanya mengisi semua field. Pura-pura sukses.
+  if (honeypot && honeypot.value.trim()) {
+    commentForm.reset();
+    showStatus("✅ Pesan berhasil dikirim!", "success");
+    return;
+  }
 
   if (!name || !message) {
     showStatus("⚠️ Nama dan pesan tidak boleh kosong.", "error");
@@ -187,6 +195,25 @@ commentForm.addEventListener("submit", async (e) => {
 
   if (message.length > 500) {
     showStatus("⚠️ Pesan terlalu panjang (maks 500 karakter).", "error");
+    return;
+  }
+
+  // Batasi jumlah link dalam satu pesan
+  const linkCount = (message.match(/https?:\/\//gi) || []).length;
+  if (linkCount > 2) {
+    showStatus("⚠️ Terlalu banyak tautan dalam pesan.", "error");
+    return;
+  }
+
+  // Cooldown 30 detik antar pengiriman
+  const COOLDOWN_MS = 30000;
+  const lastSent = Number(localStorage.getItem("commentCooldown") || 0);
+  const waitMs = lastSent + COOLDOWN_MS - Date.now();
+  if (waitMs > 0) {
+    showStatus(
+      `⏳ Tunggu ${Math.ceil(waitMs / 1000)} detik sebelum mengirim lagi.`,
+      "error",
+    );
     return;
   }
 
@@ -206,6 +233,7 @@ commentForm.addEventListener("submit", async (e) => {
 
     // Reset form
     commentForm.reset();
+    localStorage.setItem("commentCooldown", String(Date.now()));
     showStatus("✅ Pesan berhasil dikirim!", "success");
   } catch (error) {
     console.error("Error sending comment:", error);

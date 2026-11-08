@@ -3,21 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Dimas Mayoni | Web Developer</title>
-    <meta property="og:title" content="Dimas Mayoni — Web Developer" />
+    <title>Dimas Mayoni — Fullstack Developer</title>
+    <meta
+      name="description"
+      content="Portfolio Dimas Mayoni, fullstack developer asal Mojokerto. Membangun aplikasi web end-to-end: antarmuka responsif, API, database, hingga deploy."
+    />
+    <link rel="canonical" href="https://dimas-mayoni-2026-tau.vercel.app/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Dimas Mayoni" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:title" content="Dimas Mayoni — Fullstack Developer" />
     <meta
       property="og:description"
-      content="Membangun antarmuka web yang responsif, modern, dan interaktif."
+      content="Portfolio Dimas Mayoni, fullstack developer asal Mojokerto. Membangun aplikasi web end-to-end: antarmuka responsif, API, database, hingga deploy."
     />
     <meta property="og:url" content="https://dimas-mayoni-2026-tau.vercel.app/" />
-    <meta property="og:image" content="https://i.imgur.com/3g7hYNB.jpeg" />
+    <meta
+      property="og:image"
+      content="https://dimas-mayoni-2026-tau.vercel.app/img/og-image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Dimas Mayoni — Fullstack Developer"
+    />
+
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Dimas Mayoni — Web Developer" />
+    <meta name="twitter:title" content="Dimas Mayoni — Fullstack Developer" />
     <meta
       name="twitter:description"
-      content="Membangun antarmuka web yang responsif, modern, dan interaktif."
+      content="Portfolio Dimas Mayoni, fullstack developer asal Mojokerto. Membangun aplikasi web end-to-end: antarmuka responsif, API, database, hingga deploy."
     />
-    <meta name="twitter:image" content="https://i.imgur.com/3g7hYNB.jpeg" />
+    <meta
+      name="twitter:image"
+      content="https://dimas-mayoni-2026-tau.vercel.app/img/og-image.png"
+    />
     <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96.png" />
 
     <!-- Tailwind (production build) -->
@@ -31,11 +53,15 @@
       rel="stylesheet"
     />
 
-    <!-- Boxicons -->
+    <!-- Boxicons (self-hosted) -->
     <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
+      rel="preload"
+      href="fonts/boxicons.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
+    <link href="css/boxicons.min.css" rel="stylesheet" />
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css" />
@@ -46,14 +72,24 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Dimas Mayoni",
-      "jobTitle": "Web Developer",
+      "jobTitle": "Fullstack Developer",
+      "description": "Fullstack developer asal Mojokerto yang membangun aplikasi web end-to-end: antarmuka responsif, API, database, dan deploy.",
       "url": "https://dimas-mayoni-2026-tau.vercel.app",
+      "image": "https://dimas-mayoni-2026-tau.vercel.app/img/og-image.png",
       "sameAs": [
         "https://github.com/Masoka01",
         "https://www.instagram.com/mayoni_1",
         "https://linkedin.com/in/dimas-mayoni-08662b271"
       ],
-      "knowsAbout": ["Web Development", "UI Design", "Frontend Development"]
+      "knowsAbout": [
+        "Fullstack Development",
+        "Web Development",
+        "React",
+        "Next.js",
+        "Node.js",
+        "PostgreSQL",
+        "UI Design"
+      ]
     }
     </script>
   </head>
@@ -61,6 +97,8 @@
   <body
     class="font-body bg-paper text-ink dark:bg-ink dark:text-stone-100 transition-colors duration-300 overflow-x-hidden"
   >
+    <a href="#main" class="skip-link">Langsung ke konten</a>
+
     <!-- ─── NAVBAR ─── -->
     <header
       id="navbar"
@@ -122,6 +160,7 @@
       </div>
     </header>
 
+    <main id="main">
     <!-- ─── HERO ─── -->
     <section id="home" class="min-h-screen flex items-center px-5 pt-20 hero-grid">
       <div class="max-w-6xl mx-auto w-full md:max-w-4xl">
@@ -164,7 +203,7 @@
           </div>
         </div>
 
-        <p class="text-stone-400 leading-relaxed max-w-lg mt-8 mb-10 hero-fade" style="animation-delay: 0.3s">
+        <p class="text-stone-600 dark:text-stone-400 leading-relaxed max-w-lg mt-8 mb-10 hero-fade" style="animation-delay: 0.3s">
           Fullstack web developer yang membangun aplikasi web dari
           antarmuka hingga API, database, dan deploy.
         </p>
@@ -197,14 +236,14 @@
 
         <div class="grid md:grid-cols-[3fr_2fr] gap-14 mt-12">
           <div class="reveal min-w-0">
-            <p class="text-stone-400 leading-relaxed mb-5">
+            <p class="text-stone-600 dark:text-stone-400 leading-relaxed mb-5">
               Saya web developer yang fokus membangun aplikasi web
               <strong class="text-ink dark:text-white font-semibold">end-to-end</strong>:
               antarmuka yang bersih dan cepat, API yang rapi, serta data yang
               aman. Terbiasa dengan TypeScript, React/Next.js, Node.js,
               Firebase, dan PostgreSQL.
             </p>
-            <p class="text-stone-400 leading-relaxed mb-8">
+            <p class="text-stone-600 dark:text-stone-400 leading-relaxed mb-8">
               Latar belakang saya di Teknik Elektronika Industri (BNSP KKNI
               Level II) membentuk cara kerja yang teliti dan terbiasa menelusuri
               masalah sampai lapisan paling dasar. Sekarang saya juga mengajar
@@ -213,11 +252,11 @@
             </p>
 
             <div class="flex gap-4 flex-wrap">
-              <div class="flex items-center gap-2 text-sm text-stone-400">
+              <div class="flex items-center gap-2 text-sm text-stone-600 dark:text-stone-400">
                 <i class="bx bx-check-circle text-emerald-500"></i>
                 <span>2+ years web development</span>
               </div>
-              <div class="flex items-center gap-2 text-sm text-stone-400">
+              <div class="flex items-center gap-2 text-sm text-stone-600 dark:text-stone-400">
                 <i class="bx bx-check-circle text-emerald-500"></i>
                 <span>10+ projects shipped</span>
               </div>
@@ -409,7 +448,7 @@
       <div class="max-w-6xl mx-auto">
         <div class="sec-label reveal">Work</div>
         <h2 class="sec-title reveal">Proyek Pilihan</h2>
-        <p class="text-stone-400 leading-relaxed max-w-2xl mt-4 reveal">
+        <p class="text-stone-600 dark:text-stone-400 leading-relaxed max-w-2xl mt-4 reveal">
           Empat proyek yang paling menggambarkan cara saya membangun aplikasi
           end-to-end — dari antarmuka, API, data, sampai deploy.
         </p>
@@ -821,7 +860,7 @@
                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                 />
                 <div class="thumb-fallback" style="display: none">
-                  <i class="bx bx-line-chart text-3xl text-stone-600"></i>
+                  <i class="bx bx-line-chart text-3xl text-stone-500"></i>
                 </div>
                 <div class="proj-thumb-overlay">
                   <a href="https://ai-analyzer-flax.vercel.app/" target="_blank" rel="noopener" aria-label="Buka IDX Technical Analyzer">
@@ -854,7 +893,7 @@
                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                 />
                 <div class="thumb-fallback" style="display: none">
-                  <i class="bx bx-grid-alt text-3xl text-stone-600"></i>
+                  <i class="bx bx-grid-alt text-3xl text-stone-500"></i>
                 </div>
                 <div class="proj-thumb-overlay">
                   <a href="https://mayoni-dashboard.vercel.app/" target="_blank" rel="noopener" aria-label="Buka BrandDash">
@@ -887,7 +926,7 @@
                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                 />
                 <div class="thumb-fallback" style="display: none">
-                  <i class="bx bx-notepad text-3xl text-stone-600"></i>
+                  <i class="bx bx-notepad text-3xl text-stone-500"></i>
                 </div>
                 <div class="proj-thumb-overlay">
                   <a href="https://mayoni-noted.vercel.app/" target="_blank" rel="noopener" aria-label="Buka MayNote">
@@ -920,7 +959,7 @@
                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                 />
                 <div class="thumb-fallback" style="display: none">
-                  <i class="bx bx-store text-3xl text-stone-600"></i>
+                  <i class="bx bx-store text-3xl text-stone-500"></i>
                 </div>
                 <div class="proj-thumb-overlay">
                   <a href="https://louwes.vercel.app" target="_blank" rel="noopener" aria-label="Buka Louwes Store">
@@ -953,7 +992,7 @@
                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                 />
                 <div class="thumb-fallback" style="display: none">
-                  <i class="bx bx-dashboard text-3xl text-stone-600"></i>
+                  <i class="bx bx-dashboard text-3xl text-stone-500"></i>
                 </div>
                 <div class="proj-thumb-overlay">
                   <span class="opacity-60 cursor-default flex items-center justify-center w-10 h-10" aria-label="Proyek private">
@@ -964,7 +1003,7 @@
               <div class="proj-body">
                 <h3 class="proj-title">
                   Louwes Admin
-                  <span class="text-xs font-normal text-stone-600 ml-1">Private</span>
+                  <span class="text-xs font-normal text-stone-600 dark:text-stone-400 ml-1">Private</span>
                 </h3>
                 <p class="proj-desc">
                   Manajemen produk, stok, harga, dan status undangan untuk operasional Louwes.
@@ -989,7 +1028,7 @@
                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                 />
                 <div class="thumb-fallback" style="display: none">
-                  <i class="bx bx-code-alt text-3xl text-stone-600"></i>
+                  <i class="bx bx-code-alt text-3xl text-stone-500"></i>
                 </div>
                 <div class="proj-thumb-overlay">
                   <a href="https://les-komputer.vercel.app" target="_blank" rel="noopener" aria-label="Buka Mayoni.Code">
@@ -1022,7 +1061,7 @@
                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                 />
                 <div class="thumb-fallback" style="display: none">
-                  <i class="bx bx-envelope-open text-3xl text-stone-600"></i>
+                  <i class="bx bx-envelope-open text-3xl text-stone-500"></i>
                 </div>
                 <div class="proj-thumb-overlay">
                   <a href="https://mayoni-cv.vercel.app/" target="_blank" rel="noopener" aria-label="Buka CV digital">
@@ -1053,7 +1092,7 @@
 
         <div class="grid md:grid-cols-[1fr_1.2fr] gap-12 mt-12">
           <div class="reveal">
-            <p class="text-stone-400 leading-relaxed mb-8">
+            <p class="text-stone-600 dark:text-stone-400 leading-relaxed mb-8">
               Tertarik bekerja sama atau punya proyek menarik? Hubungi saya
               lewat email atau WhatsApp.
             </p>
@@ -1134,6 +1173,16 @@
                       required
                     ></textarea>
                   </div>
+                  <div class="hp-field" aria-hidden="true">
+                    <label for="hpField">Website</label>
+                    <input
+                      type="text"
+                      id="hpField"
+                      name="website"
+                      tabindex="-1"
+                      autocomplete="off"
+                    />
+                  </div>
                   <button
                     type="submit"
                     id="sendBtn"
@@ -1144,6 +1193,8 @@
                   <div
                     id="messageStatus"
                     class="status-message"
+                    role="status"
+                    aria-live="polite"
                   ></div>
                 </form>
               </div>
@@ -1167,14 +1218,16 @@
       </div>
     </section>
 
+    </main>
+
     <!-- ─── FOOTER ─── -->
     <footer class="py-6 px-5">
       <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-4">
         <span class="font-mono text-sm text-stone-500">
           mayoni<span class="text-cyan-500 animate-blink">_</span>
         </span>
-        <p class="text-xs text-stone-600">&copy; 2026 Dimas Mayoni</p>
-        <div class="flex gap-3 text-stone-600 text-sm">
+        <p class="text-xs text-stone-600 dark:text-stone-400">&copy; 2026 Dimas Mayoni</p>
+        <div class="flex gap-3 text-stone-600 dark:text-stone-400 text-sm">
           <i class="bx bxl-html5 hover:text-indigo-400 transition-colors cursor-default"></i>
           <i class="bx bxl-css3 hover:text-indigo-400 transition-colors cursor-default"></i>
           <i class="bx bxl-javascript hover:text-indigo-400 transition-colors cursor-default"></i>
