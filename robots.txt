@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dimas-mayoni-2026-tau.vercel.app/sitemap.xml

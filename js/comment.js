@@ -56,13 +56,27 @@ function displayComment(comment, id) {
   const message = comment.message || "";
   const time = comment.time || Date.now();
 
-  commentItem.innerHTML = `
-    <div class="comment-header">
-      <div class="comment-name">${name}</div>
-      <div class="comment-time">${formatTime(time)}</div>
-    </div>
-    <p class="comment-text">${message}</p>
-  `;
+  const commentHeader = document.createElement("div");
+  commentHeader.className = "comment-header";
+
+  const commentName = document.createElement("div");
+  commentName.className = "comment-name";
+  commentName.textContent = name;
+
+  const commentTime = document.createElement("div");
+  commentTime.className = "comment-time";
+  commentTime.textContent = formatTime(time);
+
+  commentHeader.appendChild(commentName);
+  commentHeader.appendChild(commentTime);
+
+  const commentText = document.createElement("p");
+  commentText.className = "comment-text";
+  commentText.textContent = message;
+
+  commentItem.appendChild(commentHeader);
+  commentItem.appendChild(commentText);
+
   return commentItem;
 }
 

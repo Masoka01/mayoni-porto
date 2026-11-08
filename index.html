@@ -18,7 +18,7 @@
       content="Membangun antarmuka web yang responsif, modern, dan interaktif."
     />
     <meta name="twitter:image" content="https://i.imgur.com/3g7hYNB.jpeg" />
-    <link rel="icon" type="image/png" sizes="96x96" href="img/96.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96.png" />
 
     <!-- Tailwind (production build) -->
     <link rel="stylesheet" href="css/tailwind.css" />
@@ -78,6 +78,7 @@
 
         <nav class="hidden md:flex items-center gap-8">
           <a href="#about" class="nl text-sm text-stone-400 hover:text-white transition-colors font-medium">About</a>
+          <a href="#experience" class="nl text-sm text-stone-400 hover:text-white transition-colors font-medium">Experience</a>
           <a href="#skills" class="nl text-sm text-stone-400 hover:text-white transition-colors font-medium">Skills</a>
           <a href="#work" class="nl text-sm text-stone-400 hover:text-white transition-colors font-medium">Work</a>
           <a href="#contact" class="nl text-sm text-stone-400 hover:text-white transition-colors font-medium">Contact</a>
@@ -106,6 +107,7 @@
         class="hidden md:hidden border-t border-stone-200 dark:border-stone-800 bg-white dark:bg-ink px-5 py-4 flex-col gap-3"
       >
         <a href="#about" class="nl-mob text-sm font-medium text-stone-400 hover:text-white transition-colors block">About</a>
+        <a href="#experience" class="nl-mob text-sm font-medium text-stone-400 hover:text-white transition-colors block">Experience</a>
         <a href="#skills" class="nl-mob text-sm font-medium text-stone-400 hover:text-white transition-colors block">Skills</a>
         <a href="#work" class="nl-mob text-sm font-medium text-stone-400 hover:text-white transition-colors block">Work</a>
         <a href="#contact" class="nl-mob text-sm font-medium text-stone-400 hover:text-white transition-colors block">Contact</a>
@@ -122,17 +124,17 @@
 
     <!-- ─── HERO ─── -->
     <section id="home" class="min-h-screen flex items-center px-5 pt-20 hero-grid">
-      <div class="max-w-6xl mx-auto w-full">
-        <div class="grid md:grid-cols-[1fr_auto] gap-16 items-center">
-            <div>
-            <div
-              class="inline-flex items-center gap-2 text-xs font-mono font-medium text-orange-600 dark:text-orange-400 bg-orange-100 dark:bg-orange-950/30 border border-orange-300 dark:border-orange-800/40 rounded-full px-3 py-1.5 mb-6 hero-fade"
-              style="animation-delay: 0s"
-            >
-              <span class="w-1.5 h-1.5 rounded-full bg-orange-500 pulse-dot-orange"></span>
-              Available for work
-            </div>
+      <div class="max-w-6xl mx-auto w-full md:max-w-4xl">
+        <div
+          class="inline-flex items-center gap-2 text-xs font-mono font-medium text-orange-600 dark:text-orange-400 bg-orange-100 dark:bg-orange-950/30 border border-orange-300 dark:border-orange-800/40 rounded-full px-3 py-1.5 mb-6 hero-fade"
+          style="animation-delay: 0s"
+        >
+          <span class="w-1.5 h-1.5 rounded-full bg-orange-500 pulse-dot-orange"></span>
+          Available for work
+        </div>
 
+        <div class="flex items-center justify-start gap-4 sm:gap-8 md:gap-10">
+          <div class="min-w-0 w-fit shrink-0">
             <h1
               class="font-head text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-3 hero-fade"
               style="animation-delay: 0.1s"
@@ -141,49 +143,48 @@
               <span class="gradient-text">Mayoni</span>
             </h1>
 
-            <p class="font-mono text-sm text-stone-500 mb-6 hero-fade" style="animation-delay: 0.2s">
-              $ web developer &amp; ui enthusiast
+            <p class="font-mono text-sm text-stone-500 hero-fade" style="animation-delay: 0.2s">
+              $ web developer
             </p>
-
-            <p class="text-stone-400 leading-relaxed max-w-lg mb-10 hero-fade" style="animation-delay: 0.3s">
-              Membangun antarmuka web yang responsif, modern, dan interaktif
-              dengan fokus pada pengalaman pengguna.
-            </p>
-
-            <div class="flex flex-wrap gap-3 mb-12 hero-fade" style="animation-delay: 0.4s">
-              <a href="pdf/CV.pdf" download class="btn-primary">
-                <i class="bx bx-download"></i> Download CV
-              </a>
-              <a href="#work" class="btn-secondary">
-                Lihat Karya <i class="bx bx-arrow-right"></i>
-              </a>
-            </div>
-
-            <div class="flex flex-wrap gap-2 hero-fade" style="animation-delay: 0.5s">
-              <span class="tech-chip"><i class="bx bxl-html5" style="color:#06B6D4"></i> HTML5</span>
-              <span class="tech-chip"><i class="bx bxl-css3" style="color:#06B6D4"></i> CSS3</span>
-              <span class="tech-chip"><i class="bx bxl-javascript" style="color:#06B6D4"></i> JavaScript</span>
-              <span class="tech-chip"><i class="bx bxl-tailwind-css" style="color:#06B6D4"></i> Tailwind</span>
-              <span class="tech-chip"><i class="bx bxl-firebase" style="color:#06B6D4"></i> Firebase</span>
-            </div>
           </div>
 
-          <div class="hidden md:block relative">
-            <div class="relative w-60">
-              <div class="hero-glow"></div>
-              <img
-                src="img/mayoni.jpeg"
-                alt="Dimas Mayoni"
-                class="relative w-60 h-60 object-cover rounded-xl border-2 border-stone-200 dark:border-stone-800"
-              />
-              <div
-                class="absolute -bottom-3 -right-3 flex items-center gap-1.5 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-700 rounded-lg px-3 py-1.5 text-xs font-semibold text-stone-600 dark:text-stone-300"
-              >
-                <span class="w-2 h-2 rounded-full bg-emerald-500 pulse-dot"></span>
-                Open to work
-              </div>
+          <div class="relative shrink-0 w-28 sm:w-32 md:w-60">
+            <div class="hero-glow hidden md:block"></div>
+            <img
+              src="img/dimas-mayoni.jpeg"
+              alt="Dimas Mayoni"
+              class="relative w-28 h-28 sm:w-32 sm:h-32 md:w-60 md:h-60 object-cover rounded-xl border-2 border-stone-200 dark:border-stone-800"
+            />
+            <div
+              class="absolute -bottom-2 right-0 md:-bottom-3 md:-right-3 flex items-center gap-1.5 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-700 rounded-lg px-2.5 py-1.5 text-[10px] md:text-xs font-semibold text-stone-600 dark:text-stone-300"
+            >
+              <i class="bx bx-map text-indigo-500"></i>
+              Mojokerto, ID
             </div>
           </div>
+        </div>
+
+        <p class="text-stone-400 leading-relaxed max-w-lg mt-8 mb-10 hero-fade" style="animation-delay: 0.3s">
+          Fullstack web developer yang membangun aplikasi web dari
+          antarmuka hingga API, database, dan deploy.
+        </p>
+
+        <div class="flex flex-wrap gap-3 mb-12 hero-fade" style="animation-delay: 0.4s">
+          <a href="pdf/CV.pdf" download class="btn-primary">
+            <i class="bx bx-download"></i> Download CV
+          </a>
+          <a href="#work" class="btn-secondary">
+            Lihat Karya <i class="bx bx-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="flex flex-wrap gap-2 hero-fade" style="animation-delay: 0.5s">
+          <span class="tech-chip"><i class="bx bx-code" style="color:#06B6D4"></i> TypeScript</span>
+          <span class="tech-chip"><i class="bx bxl-react" style="color:#06B6D4"></i> React</span>
+          <span class="tech-chip"><i class="bx bx-code-alt" style="color:#06B6D4"></i> Next.js</span>
+          <span class="tech-chip"><i class="bx bxl-nodejs" style="color:#06B6D4"></i> Node.js</span>
+          <span class="tech-chip"><i class="bx bxl-firebase" style="color:#06B6D4"></i> Firebase</span>
+          <span class="tech-chip"><i class="bx bx-data" style="color:#06B6D4"></i> PostgreSQL</span>
         </div>
       </div>
     </section>
@@ -195,35 +196,37 @@
         <h2 class="sec-title reveal">Tentang Saya</h2>
 
         <div class="grid md:grid-cols-[3fr_2fr] gap-14 mt-12">
-          <div class="reveal">
+          <div class="reveal min-w-0">
             <p class="text-stone-400 leading-relaxed mb-5">
-              Saya adalah
-              <strong class="text-ink dark:text-white font-semibold">Web Developer</strong>
-              yang berfokus pada membangun antarmuka yang bersih, cepat, dan
-              mudah digunakan. Saya bekerja dengan HTML, CSS, JavaScript,
-              Tailwind, jQuery, dan Node.js.
+              Saya web developer yang fokus membangun aplikasi web
+              <strong class="text-ink dark:text-white font-semibold">end-to-end</strong>:
+              antarmuka yang bersih dan cepat, API yang rapi, serta data yang
+              aman. Terbiasa dengan TypeScript, React/Next.js, Node.js,
+              Firebase, dan PostgreSQL.
             </p>
             <p class="text-stone-400 leading-relaxed mb-8">
-              Setiap proyek adalah kesempatan untuk belajar hal baru. Saat ini
-              sedang memperdalam Neovim sebagai editor utama
-              untuk workflow development.
+              Latar belakang saya di Teknik Elektronika Industri (BNSP KKNI
+              Level II) membentuk cara kerja yang teliti dan terbiasa menelusuri
+              masalah sampai lapisan paling dasar. Sekarang saya juga mengajar
+              les komputer dan coding sambil mengerjakan proyek freelance di
+              Mayoni.Code.
             </p>
 
-            <div class="flex gap-4">
+            <div class="flex gap-4 flex-wrap">
               <div class="flex items-center gap-2 text-sm text-stone-400">
                 <i class="bx bx-check-circle text-emerald-500"></i>
-                <span>1+ year experience</span>
+                <span>2+ years web development</span>
               </div>
               <div class="flex items-center gap-2 text-sm text-stone-400">
                 <i class="bx bx-check-circle text-emerald-500"></i>
-                <span>10+ projects</span>
+                <span>10+ projects shipped</span>
               </div>
             </div>
           </div>
 
-          <div class="reveal" style="--d: 0.1s">
+          <div class="reveal min-w-0" style="--d: 0.1s">
             <div
-              class="border border-stone-200 dark:border-stone-800 rounded-xl overflow-hidden"
+              class="border border-stone-200 dark:border-stone-800 rounded-xl overflow-hidden max-w-full"
             >
               <div
                 class="flex items-center gap-1.5 px-4 py-2.5 border-b border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-900"
@@ -239,34 +242,104 @@
                 class="font-mono text-xs leading-6 p-5 text-stone-500 dark:text-stone-400 overflow-x-auto bg-white dark:bg-ink"
               ><code><span class="text-stone-500">{</span>
   <span class="text-indigo-400">"name"</span>: <span class="text-emerald-400">"Dimas Mayoni"</span>,
-  <span class="text-indigo-400">"role"</span>: <span class="text-emerald-400">"Web Developer"</span>,
-  <span class="text-indigo-400">"location"</span>: <span class="text-emerald-400">"Indonesia"</span>,
-  <span class="text-indigo-400">"status"</span>: <span class="text-emerald-400">"Available ✅"</span>,
+  <span class="text-indigo-400">"role"</span>: <span class="text-emerald-400">"Fullstack Web Developer"</span>,
+  <span class="text-indigo-400">"location"</span>: <span class="text-emerald-400">"Mojokerto, Indonesia"</span>,
+  <span class="text-indigo-400">"status"</span>: <span class="text-emerald-400">"Open to work"</span>,
+  <span class="text-indigo-400">"stack"</span>: <span class="text-stone-500">[</span><span class="text-emerald-400">"TypeScript"</span>, <span class="text-emerald-400">"Next.js"</span>, <span class="text-emerald-400">"Firebase"</span>, <span class="text-emerald-400">"PostgreSQL"</span><span class="text-stone-500">]</span>,
   <span class="text-indigo-400">"learning"</span>: <span class="text-emerald-400">"Neovim"</span>
 <span class="text-stone-500">}</span></code></pre>
             </div>
 
             <div class="flex gap-4 mt-4">
               <div
-                class="flex-1 border border-stone-200 dark:border-stone-800 rounded-xl p-5 text-center"
+                class="flex-1 min-w-0 border border-stone-200 dark:border-stone-800 rounded-xl p-5 text-center"
               >
                 <p class="stat-num font-head text-2xl font-bold text-ink dark:text-white" data-target="10" data-suffix="+">0</p>
                 <p class="text-xs text-stone-500 mt-1 font-medium">Projects</p>
               </div>
               <div
-                class="flex-1 border border-stone-200 dark:border-stone-800 rounded-xl p-5 text-center"
+                class="flex-1 min-w-0 border border-stone-200 dark:border-stone-800 rounded-xl p-5 text-center"
               >
-                <p class="stat-num font-head text-2xl font-bold text-ink dark:text-white" data-target="4" data-suffix="+">0</p>
-                <p class="text-xs text-stone-500 mt-1 font-medium">Frameworks</p>
+                <p class="stat-num font-head text-2xl font-bold text-ink dark:text-white" data-target="2" data-suffix=" yrs">0</p>
+                <p class="text-xs text-stone-500 mt-1 font-medium">Experience</p>
               </div>
               <div
-                class="flex-1 border border-stone-200 dark:border-stone-800 rounded-xl p-5 text-center"
+                class="flex-1 min-w-0 border border-stone-200 dark:border-stone-800 rounded-xl p-5 text-center"
               >
-                <p class="stat-num font-head text-2xl font-bold text-ink dark:text-white" data-target="2026">0</p>
-                <p class="text-xs text-stone-500 mt-1 font-medium">Active</p>
+                <p class="stat-num font-head text-2xl font-bold text-ink dark:text-white" data-target="15" data-suffix="+">0</p>
+                <p class="text-xs text-stone-500 mt-1 font-medium">Stack</p>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── EXPERIENCE ─── -->
+    <section id="experience" class="py-24 px-5">
+      <div class="max-w-6xl mx-auto">
+        <div class="sec-label reveal">Experience</div>
+        <h2 class="sec-title reveal">Pengalaman</h2>
+
+        <div class="timeline mt-12">
+          <article class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-card">
+              <div class="timeline-head">
+                <div>
+                  <h3 class="timeline-role">Freelance Web Developer</h3>
+                  <p class="timeline-company">Mayoni.Code</p>
+                </div>
+                <span class="timeline-period">Des 2025 – Sekarang</span>
+              </div>
+              <ul class="timeline-list">
+                <li>Membangun company profile dan landing page untuk klien, dari desain hingga deploy.</li>
+                <li>Mengembangkan frontend interaktif dengan HTML, CSS, JavaScript, dan Tailwind.</li>
+                <li>Menangani konsultasi UI/UX, hosting, dan pemeliharaan situs.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal" style="--d: 0.05s">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-card">
+              <div class="timeline-head">
+                <div>
+                  <h3 class="timeline-role">Guru Les Komputer &amp; Coding</h3>
+                  <p class="timeline-company">Les Privat · Mojokerto</p>
+                </div>
+                <span class="timeline-period">Feb 2025 – Sekarang</span>
+              </div>
+              <ul class="timeline-list">
+                <li>Mengajar dasar pemrograman dan logika untuk siswa SD–SMA.</li>
+                <li>Memperkenalkan Linux dan alur kerja AI-assisted learning.</li>
+                <li>Menyusun materi belajar yang praktis dan mudah diikuti.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal" style="--d: 0.1s">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-card">
+              <div class="timeline-head">
+                <div>
+                  <h3 class="timeline-role">Web Developer, Undangan Digital</h3>
+                  <p class="timeline-company">Teknos Indonesia</p>
+                </div>
+                <span class="timeline-period">Apr 2024 – Agu 2025</span>
+              </div>
+              <ul class="timeline-list">
+                <li>Membangun dan mengelola platform undangan pernikahan digital.</li>
+                <li>Mengembangkan fitur frontend interaktif berbasis HTML/CSS/JS.</li>
+                <li>Menjaga konsistensi tampilan dan performa bersama tim.</li>
+              </ul>
+            </div>
+          </article>
+
+          <p class="timeline-earlier reveal" style="--d: 0.15s">
+            Sebelumnya: Teknisi Elektronika (LED Turbo), operasional F&amp;B, dan
+            magang Quality Control — 2018–2025.
+          </p>
         </div>
       </div>
     </section>
@@ -287,41 +360,44 @@
               <span class="skill-tag"><i class="bx bxl-html5"></i> HTML5</span>
               <span class="skill-tag"><i class="bx bxl-css3"></i> CSS3</span>
               <span class="skill-tag"><i class="bx bxl-javascript"></i> JavaScript</span>
+              <span class="skill-tag"><i class="bx bxl-typescript"></i> TypeScript</span>
               <span class="skill-tag"><i class="bx bxl-tailwind-css"></i> Tailwind</span>
-              <span class="skill-tag"><i class="bx bxl-jquery"></i> jQuery</span>
-              <span class="skill-tag"><i class="bx bxl-bootstrap"></i> Bootstrap</span>
-              <span class="skill-tag"><i class="bx bxl-react"></i> React.js</span>
+              <span class="skill-tag"><i class="bx bxl-react"></i> React</span>
+              <span class="skill-tag"><i class="bx bx-code-curly"></i> Next.js</span>
+              <span class="skill-tag"><i class="bx bxl-vuejs"></i> Vue</span>
             </div>
           </div>
 
           <div class="skill-card reveal" style="--d: 0.08s">
             <div class="flex items-center gap-2 mb-4">
               <i class="bx bx-server text-indigo-400 text-lg"></i>
-              <span class="text-xs font-mono uppercase tracking-widest text-stone-500">Backend</span>
+              <span class="text-xs font-mono uppercase tracking-widest text-stone-500">Backend &amp; Data</span>
             </div>
             <div class="flex flex-wrap gap-2">
-              <span class="skill-tag"><i class="bx bxl-firebase"></i> Firebase</span>
               <span class="skill-tag"><i class="bx bxl-nodejs"></i> Node.js</span>
-              <span class="skill-tag"><i class="bx bx-code-curly"></i> Next.js</span>
-              <span class="skill-tag"><i class="bx bx-transfer"></i> REST API</span>
+              <span class="skill-tag"><i class="bx bxl-firebase"></i> Firebase</span>
               <span class="skill-tag"><i class="bx bx-data"></i> Firestore</span>
-              <span class="skill-tag"><i class="bx bx-table"></i> PostgreSQL</span>
-              <span class="skill-tag"><i class="bx bx-spreadsheet"></i> MySQL</span>
+              <span class="skill-tag"><i class="bx bxl-supabase"></i> Supabase</span>
+              <span class="skill-tag"><i class="bx bxl-postgresql"></i> PostgreSQL</span>
+              <span class="skill-tag"><i class="bx bxl-mysql"></i> MySQL</span>
+              <span class="skill-tag"><i class="bx bx-transfer"></i> REST API</span>
             </div>
           </div>
 
           <div class="skill-card reveal" style="--d: 0.16s">
             <div class="flex items-center gap-2 mb-4">
               <i class="bx bx-wrench text-indigo-400 text-lg"></i>
-              <span class="text-xs font-mono uppercase tracking-widest text-stone-500">Tools & Deploy</span>
+              <span class="text-xs font-mono uppercase tracking-widest text-stone-500">Tools &amp; Deploy</span>
             </div>
             <div class="flex flex-wrap gap-2">
-              <span class="skill-tag"><i class="bx bxl-git"></i> Git & GitHub</span>
-              <span class="skill-tag"><i class="bx bxl-visual-studio"></i> VS Code</span>
+              <span class="skill-tag"><i class="bx bxl-git"></i> Git &amp; GitHub</span>
+              <span class="skill-tag"><i class="bx bxl-github"></i> GitHub Actions</span>
               <span class="skill-tag"><i class="bx bx-cloud"></i> Vercel</span>
-              <span class="skill-tag"><i class="bx bx-terminal"></i> Linux CLI</span>
-              <span class="skill-tag"><i class="bx bx-store"></i> LocalStorage</span>
+              <span class="skill-tag"><i class="bx bxl-tux"></i> Linux</span>
+              <span class="skill-tag"><i class="bx bxl-visual-studio"></i> VS Code</span>
+              <span class="skill-tag"><i class="bx bx-edit"></i> Neovim</span>
               <span class="skill-tag"><i class="bx bx-table"></i> Sheets API</span>
+              <span class="skill-tag"><i class="bx bx-cloud-upload"></i> Cloudinary</span>
             </div>
           </div>
         </div>
@@ -332,289 +408,636 @@
     <section id="work" class="py-24 px-5">
       <div class="max-w-6xl mx-auto">
         <div class="sec-label reveal">Work</div>
-        <h2 class="sec-title reveal">Recent Projects</h2>
+        <h2 class="sec-title reveal">Proyek Pilihan</h2>
+        <p class="text-stone-400 leading-relaxed max-w-2xl mt-4 reveal">
+          Empat proyek yang paling menggambarkan cara saya membangun aplikasi
+          end-to-end — dari antarmuka, API, data, sampai deploy.
+        </p>
 
-        <div class="filter-bar reveal">
+        <div class="filter-bar reveal mt-8">
           <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="web">Web App</button>
           <button class="filter-btn" data-filter="dashboard">Dashboard</button>
           <button class="filter-btn" data-filter="landing">Landing</button>
           <button class="filter-btn" data-filter="private">Private</button>
         </div>
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
-          <!-- Card 1 — Featured -->
-          <div class="proj-card reveal group" data-category="web">
-            <div class="proj-thumb">
+        <div class="flagship-grid mt-10">
+          <!-- JobMailer -->
+          <article class="flagship-card reveal" data-category="web private">
+            <div class="flagship-thumb">
               <img
-                src="img/1.webp"
-                srcset="img/1-400w.webp 400w, img/1-800w.webp 800w, img/1.webp 1600w"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                src="img/job-mailer-800w.webp"
+                srcset="img/job-mailer-400w.webp 400w, img/job-mailer-800w.webp 800w, img/job-mailer.webp 1600w"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                width="1600"
+                height="900"
                 loading="lazy"
-                alt="Curriculum Vitae"
-                onerror="
-                  this.style.display = 'none';
-                  this.nextElementSibling.style.display = 'flex';
-                "
+                alt="Dashboard JobMailer dengan daftar loker dan status pengiriman"
               />
-              <div class="thumb-fallback" style="display: none">
-                <i class="bx bx-envelope-open text-3xl text-stone-600"></i>
-              </div>
-              <div class="proj-thumb-overlay">
-                <a href="https://mayoni-cv.vercel.app/" target="_blank" rel="noopener">
-                  <i class="bx bx-link-external text-lg"></i>
-                </a>
-              </div>
-            </div>
-            <div class="proj-body">
-              <h3 class="proj-title">Curriculum Vitae</h3>
-              <p class="proj-desc">
-                CV digital interaktif dengan desain modern dan fitur unduhan PDF.
-              </p>
-              <div class="proj-tags">
-                <span>HTML</span><span>Bootstrap</span><span>React</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="proj-card reveal group" style="--d: 0.05s" data-category="web">
-            <div class="proj-thumb">
-              <img
-                src="img/2.webp"
-                srcset="img/2-400w.webp 400w, img/2-800w.webp 800w, img/2.webp 1600w"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                loading="lazy"
-                alt="Louwes Store"
-                onerror="
-                  this.style.display = 'none';
-                  this.nextElementSibling.style.display = 'flex';
-                "
-              />
-              <div class="thumb-fallback" style="display: none">
-                <i class="bx bx-store text-3xl text-stone-600"></i>
-              </div>
-              <div class="proj-thumb-overlay">
-                <a href="https://louwes.vercel.app" target="_blank" rel="noopener">
-                  <i class="bx bx-link-external text-lg"></i>
-                </a>
-              </div>
-            </div>
-            <div class="proj-body">
-              <h3 class="proj-title">Louwes Store</h3>
-              <p class="proj-desc">
-                Toko online kaos & undangan pernikahan dengan katalog produk dan sistem pemesanan.
-              </p>
-              <div class="proj-tags">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="proj-card reveal group" style="--d: 0.1s" data-category="web">
-            <div class="proj-thumb">
-              <img
-                src="img/3.webp"
-                srcset="img/3-400w.webp 400w, img/3-800w.webp 800w, img/3.webp 1600w"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                loading="lazy"
-                alt="IDX Technical Analyzer"
-                onerror="
-                  this.style.display = 'none';
-                  this.nextElementSibling.style.display = 'flex';
-                "
-              />
-              <div class="thumb-fallback" style="display: none">
-                <i class="bx bx-line-chart text-3xl text-stone-600"></i>
-              </div>
-              <div class="proj-thumb-overlay">
-                <a href="https://ai-analyzer-flax.vercel.app/" target="_blank" rel="noopener">
-                  <i class="bx bx-link-external text-lg"></i>
-                </a>
-              </div>
-            </div>
-            <div class="proj-body">
-              <h3 class="proj-title">IDX Technical Analyzer</h3>
-              <p class="proj-desc">
-                Web analisis teknikal saham berbasis AI untuk pasar modal Indonesia.
-              </p>
-              <div class="proj-tags">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>API</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 4 — Private -->
-          <div class="proj-card reveal group" style="--d: 0.15s" data-category="dashboard private">
-            <div class="proj-thumb">
-              <img
-                src="img/4.webp"
-                srcset="img/4-400w.webp 400w, img/4-800w.webp 800w, img/4.webp 1600w"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                loading="lazy"
-                alt="Admin Dashboard"
-                onerror="
-                  this.style.display = 'none';
-                  this.nextElementSibling.style.display = 'flex';
-                "
-              />
-              <div class="thumb-fallback" style="display: none">
-                <i class="bx bx-dashboard text-3xl text-stone-600"></i>
-              </div>
-              <div class="proj-thumb-overlay">
-                <span class="opacity-60 cursor-default flex items-center justify-center w-10 h-10">
+              <div class="flagship-thumb-overlay">
+                <span
+                  class="opacity-60 cursor-default flex items-center justify-center w-10 h-10"
+                  aria-label="Proyek private"
+                >
                   <i class="bx bx-lock text-lg text-white"></i>
                 </span>
               </div>
+              <span class="flagship-badge private">Private</span>
             </div>
-            <div class="proj-body">
-              <h3 class="proj-title">
-                Admin Dashboard
-                <span class="text-xs font-normal text-stone-600 ml-1">Private</span>
-              </h3>
-              <p class="proj-desc">
-                Dashboard admin untuk manajemen data dan monitoring sistem.
+            <div class="flagship-body">
+              <div class="flagship-top">
+                <h3 class="flagship-title">JobMailer</h3>
+                <span class="flagship-link is-locked" aria-label="Proyek private">
+                  <i class="bx bx-lock"></i>
+                </span>
+              </div>
+              <p class="flagship-desc">
+                Dashboard untuk mengelola lamaran kerja dan mengirim email ke
+                banyak HRD sekaligus, lengkap dengan template dan status.
               </p>
+              <p class="flagship-meta">Personal project · 2026 · Private</p>
               <div class="proj-tags">
-                <span>TSX</span><span>Vite</span><span>Firebase</span><span>Cloudinary</span>
+                <span>Next.js 14</span><span>TypeScript</span><span>Firebase Admin</span><span>Nodemailer</span>
+              </div>
+
+              <button
+                class="case-trigger"
+                type="button"
+                aria-haspopup="dialog"
+                aria-expanded="false"
+              >
+                Baca case study <i class="bx bx-chevron-right"></i>
+              </button>
+              <div class="case-data" hidden>
+<div class="case-body">
+                  <div class="case-block">
+                    <h4>Konteks</h4>
+                    <p>
+                      Melamar kerja satu per satu berarti menyalin template,
+                      melampirkan CV, dan mencatat status secara manual.
+                      JobMailer menyatukan seluruh alur itu dalam satu dashboard.
+                    </p>
+                  </div>
+                  <div class="case-block">
+                    <h4>Yang dibangun</h4>
+                    <ul>
+                      <li>CRUD daftar loker dengan email HRD dan status pengiriman.</li>
+                      <li>Upload PDF info loker dan CV global yang otomatis dilampirkan.</li>
+                      <li>Template surat dengan variabel dinamis seperti <code>{{company}}</code> dan <code>{{position}}</code>.</li>
+                      <li>Kirim per loker atau blast, dengan status pending, sent, dan failed.</li>
+                    </ul>
+                  </div>
+                  <div class="case-block">
+                    <h4>Arsitektur</h4>
+                    <ul>
+                      <li>Next.js 14 App Router + TypeScript; UI dan API route dalam satu repo.</li>
+                      <li>Firestore lewat Firebase Admin SDK — kredensial hanya di server.</li>
+                      <li>Nodemailer + Gmail SMTP untuk pengiriman dan lampiran.</li>
+                      <li>Data lamaran menyimpan PDF sebagai base64 dan status per dokumen.</li>
+                    </ul>
+                  </div>
+                  <div class="case-block">
+                    <h4>Tantangan</h4>
+                    <p>
+                      Menjaga kredensial email dan Firebase tetap server-side,
+                      sekaligus memastikan status tiap lamaran tidak tertukar
+                      saat pengiriman dilakukan massal. Solusinya memisahkan
+                      route API per tanggung jawab dan memperbarui status per
+                      dokumen.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </article>
 
-          <!-- Card 5 -->
-          <div class="proj-card reveal group" style="--d: 0.2s" data-category="web landing">
-            <div class="proj-thumb">
+          <!-- Telegram Scheduler -->
+          <article class="flagship-card reveal" style="--d: 0.05s" data-category="web">
+            <div class="flagship-thumb">
               <img
-                src="img/5.webp"
-                srcset="img/5-400w.webp 400w, img/5-800w.webp 800w, img/5.webp 1366w"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                src="img/telegram-scheduler-800w.webp"
+                srcset="img/telegram-scheduler-400w.webp 400w, img/telegram-scheduler-800w.webp 800w, img/telegram-scheduler.webp 1600w"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                width="1600"
+                height="900"
                 loading="lazy"
-                alt="Mayoni.Code"
-                onerror="
-                  this.style.display = 'none';
-                  this.nextElementSibling.style.display = 'flex';
-                "
+                alt="Form penjadwalan pesan Telegram dan daftar pesan terjadwal"
               />
-              <div class="thumb-fallback" style="display: none">
-                <i class="bx bx-code-alt text-3xl text-stone-600"></i>
-              </div>
-              <div class="proj-thumb-overlay">
-                <a href="https://les-komputer.vercel.app" target="_blank" rel="noopener">
+              <div class="flagship-thumb-overlay">
+                <a
+                  href="https://pesan-terjadwal.vercel.app/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Buka demo Telegram Scheduler"
+                >
                   <i class="bx bx-link-external text-lg"></i>
                 </a>
               </div>
+              <span class="flagship-badge">Live demo</span>
             </div>
-            <div class="proj-body">
-              <h3 class="proj-title">Mayoni.Code</h3>
-              <p class="proj-desc">
-                Halaman promosi kursus komputer untuk tingkat SD, SMP, dan SMA.
+            <div class="flagship-body">
+              <div class="flagship-top">
+                <h3 class="flagship-title">Telegram Scheduler</h3>
+                <a
+                  class="flagship-link"
+                  href="https://pesan-terjadwal.vercel.app/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Buka demo Telegram Scheduler"
+                >
+                  <i class="bx bx-link-external"></i>
+                </a>
+              </div>
+              <p class="flagship-desc">
+                Penjadwal pesan Telegram dengan opsi sekali, harian, mingguan,
+                dan per jam — dijalankan otomatis lewat Vercel Cron.
               </p>
+              <p class="flagship-meta">Personal project · 2026 · Public</p>
               <div class="proj-tags">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                <span>Next.js 14</span><span>TypeScript</span><span>Firestore</span><span>Telegram API</span><span>Vercel Cron</span>
+              </div>
+
+              <button
+                class="case-trigger"
+                type="button"
+                aria-haspopup="dialog"
+                aria-expanded="false"
+              >
+                Baca case study <i class="bx bx-chevron-right"></i>
+              </button>
+              <div class="case-data" hidden>
+<div class="case-body">
+                  <div class="case-block">
+                    <h4>Konteks</h4>
+                    <p>
+                      Pesan rutin ke grup atau channel sering terlewat.
+                      Aplikasi ini menyimpan jadwal dan mengirimkannya otomatis
+                      melalui bot Telegram.
+                    </p>
+                  </div>
+                  <div class="case-block">
+                    <h4>Yang dibangun</h4>
+                    <ul>
+                      <li>Form target chat ID, isi pesan HTML, dan waktu kirim.</li>
+                      <li>Opsi pengulangan sekali, harian, mingguan, dan per jam.</li>
+                      <li>Daftar pesan dengan status pending, sent, dan failed.</li>
+                      <li>Refresh otomatis dan endpoint cron yang diamankan secret.</li>
+                    </ul>
+                  </div>
+                  <div class="case-block">
+                    <h4>Arsitektur</h4>
+                    <ul>
+                      <li>Next.js 14 App Router dengan route <code>/api/schedule</code> dan <code>/api/cron</code>.</li>
+                      <li>Firestore menyimpan <code>scheduled_messages</code> beserta <code>nextRunAt</code>.</li>
+                      <li>Vercel Cron memanggil endpoint setiap menit; bot mengirim lewat Telegram API.</li>
+                      <li><code>CRON_SECRET</code> memastikan endpoint hanya bisa dipanggil oleh cron.</li>
+                    </ul>
+                  </div>
+                  <div class="case-block">
+                    <h4>Tantangan</h4>
+                    <p>
+                      Pesan berulang harus dihitung ulang tanpa mengirim dua kali,
+                      dan endpoint cron tidak boleh terbuka untuk publik.
+                      Solusinya menyimpan <code>nextRunAt</code> per pesan serta
+                      memverifikasi Bearer token di setiap pemanggilan cron.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </article>
 
-          <!-- Card 6 -->
-          <div class="proj-card reveal group" style="--d: 0.25s" data-category="dashboard">
-            <div class="proj-thumb">
+          <!-- ESP32 Nav -->
+          <article class="flagship-card reveal" style="--d: 0.1s" data-category="web">
+            <div class="flagship-thumb">
               <img
-                src="img/6.webp"
-                srcset="img/6-400w.webp 400w, img/6-800w.webp 800w, img/6.webp 1600w"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                src="img/esp32-nav-800w.webp"
+                srcset="img/esp32-nav-400w.webp 400w, img/esp32-nav-800w.webp 800w, img/esp32-nav.webp 1600w"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                width="1600"
+                height="900"
                 loading="lazy"
-                alt="BrandDash"
-                onerror="
-                  this.style.display = 'none';
-                  this.nextElementSibling.style.display = 'flex';
-                "
+                alt="Peta gelap ESP32 Nav dengan rute dan penanda lokasi"
               />
-              <div class="thumb-fallback" style="display: none">
-                <i class="bx bx-grid-alt text-3xl text-stone-600"></i>
-              </div>
-              <div class="proj-thumb-overlay">
-                <a href="https://mayoni-dashboard.vercel.app/" target="_blank" rel="noopener">
+              <div class="flagship-thumb-overlay">
+                <a
+                  href="https://esp32-nav.vercel.app/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Buka demo ESP32 Nav"
+                >
                   <i class="bx bx-link-external text-lg"></i>
                 </a>
               </div>
+              <span class="flagship-badge">Live demo</span>
             </div>
-            <div class="proj-body">
-              <h3 class="proj-title">BrandDash</h3>
-              <p class="proj-desc">
-                Dashboard manajemen data brand & produk dengan laporan visual dan cetak resi.
-              </p>
-              <div class="proj-tags">
-                <span>Tailwind</span><span>jQuery</span><span>Sheets API</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 7 -->
-          <div class="proj-card reveal group" style="--d: 0.3s" data-category="web">
-            <div class="proj-thumb">
-              <img
-                src="img/7.webp"
-                srcset="img/7-400w.webp 400w, img/7-800w.webp 800w, img/7.webp 1600w"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                loading="lazy"
-                alt="MayNote"
-                onerror="
-                  this.style.display = 'none';
-                  this.nextElementSibling.style.display = 'flex';
-                "
-              />
-              <div class="thumb-fallback" style="display: none">
-                <i class="bx bx-notepad text-3xl text-stone-600"></i>
-              </div>
-              <div class="proj-thumb-overlay">
-                <a href="https://mayoni-noted.vercel.app/" target="_blank" rel="noopener">
-                  <i class="bx bx-link-external text-lg"></i>
+            <div class="flagship-body">
+              <div class="flagship-top">
+                <h3 class="flagship-title">ESP32 Nav</h3>
+                <a
+                  class="flagship-link"
+                  href="https://esp32-nav.vercel.app/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Buka demo ESP32 Nav"
+                >
+                  <i class="bx bx-link-external"></i>
                 </a>
               </div>
-            </div>
-            <div class="proj-body">
-              <h3 class="proj-title">MayNote</h3>
-              <p class="proj-desc">Aplikasi pencatatan berbasis web dengan penyimpanan file.</p>
+              <p class="flagship-desc">
+                PWA navigasi yang mengirim instruksi rute ke display ESP32 lewat
+                BLE — dari peta di HP sampai firmware C++ di perangkat.
+              </p>
+              <p class="flagship-meta">Personal project · 2026 · Public</p>
               <div class="proj-tags">
-                <span>TypeScript</span><span>Vue</span><span>Supabase</span>
+                <span>Next.js 16</span><span>React 19</span><span>MapLibre</span><span>Web Bluetooth</span><span>C++ / ESP32</span>
+              </div>
+
+              <button
+                class="case-trigger"
+                type="button"
+                aria-haspopup="dialog"
+                aria-expanded="false"
+              >
+                Baca case study <i class="bx bx-chevron-right"></i>
+              </button>
+              <div class="case-data" hidden>
+<div class="case-body">
+                  <div class="case-block">
+                    <h4>Konteks</h4>
+                    <p>
+                      Layar HP tidak selalu ideal saat berkendara. ESP32 Nav
+                      memindahkan instruksi navigasi ke display kecil yang
+                      terhubung langsung dengan browser lewat BLE.
+                    </p>
+                  </div>
+                  <div class="case-block">
+                    <h4>Yang dibangun</h4>
+                    <ul>
+                      <li>Pencarian tujuan, pemilihan kendaraan, dan preferensi hindari tol.</li>
+                      <li>Peta MapLibre/Leaflet dengan rute dan favorit.</li>
+                      <li>Pengiriman maneuver ke ESP32 lewat Web Bluetooth GATT.</li>
+                      <li>Firmware C++ yang menampilkan arah, jarak, dan teks instruksi.</li>
+                      <li>PWA dengan share target dan fallback geocoder Nominatim/Photon.</li>
+                    </ul>
+                  </div>
+                  <div class="case-block">
+                    <h4>Arsitektur</h4>
+                    <ul>
+                      <li>Next.js 16 + React 19; peta memakai MapLibre dan Leaflet.</li>
+                      <li>Protokol BLE <code>V1|code|distance|text</code>, dikirim dalam chunk 20 byte.</li>
+                      <li>Parser firmware menahan byte sampai newline dan mengantrekan frame.</li>
+                      <li>Firestore menyimpan favorit; API <code>/api/expand</code> meresolve shortlink Maps.</li>
+                    </ul>
+                  </div>
+                  <div class="case-block">
+                    <h4>Tantangan</h4>
+                    <p>
+                      Satu frame BLE bisa terpecah menjadi beberapa write, dan
+                      shortlink Google Maps berperilaku berbeda antara PWA di HP
+                      dan desktop. Solusinya parser frame dengan antrean di
+                      firmware, resolve shortlink di server, serta fallback
+                      Photon ketika Nominatim tidak menemukan hasil.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </article>
 
-          <!-- Card 8 — Private -->
-          <div class="proj-card reveal group" style="--d: 0.35s" data-category="web private">
-            <div class="proj-thumb">
+          <!-- Anestesi Lab -->
+          <article class="flagship-card reveal" style="--d: 0.15s" data-category="web private">
+            <div class="flagship-thumb">
               <img
-                src="img/8.webp"
-                srcset="img/8-400w.webp 400w, img/8-800w.webp 800w, img/8.webp 1600w"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                src="img/anestesi-lab-800w.webp"
+                srcset="img/anestesi-lab-400w.webp 400w, img/anestesi-lab-800w.webp 800w, img/anestesi-lab.webp 1600w"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                width="1600"
+                height="900"
                 loading="lazy"
-                alt="Anestesi Lab"
-                onerror="
-                  this.style.display = 'none';
-                  this.nextElementSibling.style.display = 'flex';
-                "
+                alt="Panel admin Anestesi Lab dengan ringkasan inventaris dan booking"
               />
-              <div class="thumb-fallback" style="display: none">
-                <i class="bx bxs-graduation text-3xl text-stone-600"></i>
-              </div>
-              <div class="proj-thumb-overlay">
-                <span class="opacity-60 cursor-default flex items-center justify-center w-10 h-10">
+              <div class="flagship-thumb-overlay">
+                <span
+                  class="opacity-60 cursor-default flex items-center justify-center w-10 h-10"
+                  aria-label="Proyek private"
+                >
                   <i class="bx bx-lock text-lg text-white"></i>
                 </span>
               </div>
+              <span class="flagship-badge private">Private</span>
             </div>
-            <div class="proj-body">
-              <h3 class="proj-title">
-                Anestesi Lab
-                <span class="text-xs font-normal text-stone-600 ml-1">Private</span>
-              </h3>
-              <p class="proj-desc">
-                Platform pembelajaran anestesi untuk mahasiswa kedokteran.
+            <div class="flagship-body">
+              <div class="flagship-top">
+                <h3 class="flagship-title">Anestesi Lab</h3>
+                <span class="flagship-link is-locked" aria-label="Proyek private">
+                  <i class="bx bx-lock"></i>
+                </span>
+              </div>
+              <p class="flagship-desc">
+                Sistem manajemen laboratorium anestesi: jadwal praktikum,
+                absensi QR, inventaris alat, dan pengguna dalam satu aplikasi.
               </p>
+              <p class="flagship-meta">Client project · 2026 · Private</p>
               <div class="proj-tags">
-                <span>React</span><span>TypeScript</span><span>Vite</span><span>Tailwind</span><span>Firebase</span>
+                <span>React 18</span><span>TypeScript</span><span>PostgreSQL</span><span>Prisma</span><span>Express</span>
+              </div>
+
+              <button
+                class="case-trigger"
+                type="button"
+                aria-haspopup="dialog"
+                aria-expanded="false"
+              >
+                Baca case study <i class="bx bx-chevron-right"></i>
+              </button>
+              <div class="case-data" hidden>
+<div class="case-body">
+                  <div class="case-block">
+                    <h4>Konteks</h4>
+                    <p>
+                      Laboratorium anestesi mengelola jadwal, alat, absensi, dan
+                      pengumuman dengan alur manual. Aplikasi ini menyatukan
+                      semuanya dengan akses berbeda untuk admin, laboran, dan
+                      mahasiswa.
+                    </p>
+                  </div>
+                  <div class="case-block">
+                    <h4>Yang dibangun</h4>
+                    <ul>
+                      <li>Pengajuan dan approval jadwal praktikum beserta slot.</li>
+                      <li>Absensi QR: generate QR per jadwal dan scan dari perangkat mahasiswa.</li>
+                      <li>Inventaris alat/BHP, peminjaman, dan pengembalian otomatis.</li>
+                      <li>Manajemen pengguna, pengumuman, dan pengaturan lokasi absensi.</li>
+                    </ul>
+                  </div>
+                  <div class="case-block">
+                    <h4>Arsitektur</h4>
+                    <ul>
+                      <li>SPA React 18 + TypeScript + Vite, state dengan Zustand, routing React Router.</li>
+                      <li>REST API Express + Prisma + PostgreSQL; autentikasi JWT Bearer.</li>
+                      <li>Upload foto lewat signed upload Cloudinary.</li>
+                      <li>Nginx menyajikan SPA statis dan mem-proxy <code>/api</code> ke backend.</li>
+                    </ul>
+                  </div>
+                  <div class="case-block">
+                    <h4>Tantangan</h4>
+                    <p>
+                      Menjaga konsistensi stok dan absensi lintas role, terutama
+                      saat pengembalian alat dan approval jadwal terjadi
+                      bersamaan. Solusinya memusatkan akses data di API,
+                      melindungi route per role, dan menyediakan helper
+                      auto-return.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="mt-16">
+          <div class="flex items-end justify-between gap-4 flex-wrap">
+            <div>
+              <div class="sec-label reveal">More</div>
+              <h3 class="other-title reveal">Other projects</h3>
+            </div>
+            <p class="font-mono text-xs text-stone-500 reveal">7 proyek lainnya</p>
+          </div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-6">
+            <!-- IDX Technical Analyzer -->
+            <div class="proj-card reveal" data-category="web">
+              <div class="proj-thumb">
+                <img
+                  src="img/idx-technical-analyzer-800w.webp"
+                  srcset="img/idx-technical-analyzer-400w.webp 400w, img/idx-technical-analyzer-800w.webp 800w, img/idx-technical-analyzer.webp 1600w"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  width="1600"
+                  height="900"
+                  loading="lazy"
+                  alt="Chart dan watchlist IDX Technical Analyzer"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="thumb-fallback" style="display: none">
+                  <i class="bx bx-line-chart text-3xl text-stone-600"></i>
+                </div>
+                <div class="proj-thumb-overlay">
+                  <a href="https://ai-analyzer-flax.vercel.app/" target="_blank" rel="noopener" aria-label="Buka IDX Technical Analyzer">
+                    <i class="bx bx-link-external text-lg"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="proj-body">
+                <h3 class="proj-title">IDX Technical Analyzer</h3>
+                <p class="proj-desc">
+                  Chart harga, indikator SMA/BB/MACD, watchlist, dan analisis AI untuk saham IDX.
+                </p>
+                <div class="proj-tags">
+                  <span>Next.js</span><span>TypeScript</span><span>Recharts</span><span>Zustand</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- BrandDash -->
+            <div class="proj-card reveal" style="--d: 0.05s" data-category="dashboard">
+              <div class="proj-thumb">
+                <img
+                  src="img/branddash-800w.webp"
+                  srcset="img/branddash-400w.webp 400w, img/branddash-800w.webp 800w, img/branddash.webp 1600w"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  width="1600"
+                  height="900"
+                  loading="lazy"
+                  alt="Dashboard BrandDash dengan grafik label, opp, dan pouch"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="thumb-fallback" style="display: none">
+                  <i class="bx bx-grid-alt text-3xl text-stone-600"></i>
+                </div>
+                <div class="proj-thumb-overlay">
+                  <a href="https://mayoni-dashboard.vercel.app/" target="_blank" rel="noopener" aria-label="Buka BrandDash">
+                    <i class="bx bx-link-external text-lg"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="proj-body">
+                <h3 class="proj-title">BrandDash</h3>
+                <p class="proj-desc">
+                  Dashboard manajemen brand dan produk dengan laporan visual serta cetak resi.
+                </p>
+                <div class="proj-tags">
+                  <span>Next.js</span><span>TypeScript</span><span>Recharts</span><span>Sheets API</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- MayNote -->
+            <div class="proj-card reveal" style="--d: 0.1s" data-category="web">
+              <div class="proj-thumb">
+                <img
+                  src="img/maynote-800w.webp"
+                  srcset="img/maynote-400w.webp 400w, img/maynote-800w.webp 800w, img/maynote.webp 1600w"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  width="1600"
+                  height="900"
+                  loading="lazy"
+                  alt="Aplikasi catatan MayNote dengan sidebar dan editor"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="thumb-fallback" style="display: none">
+                  <i class="bx bx-notepad text-3xl text-stone-600"></i>
+                </div>
+                <div class="proj-thumb-overlay">
+                  <a href="https://mayoni-noted.vercel.app/" target="_blank" rel="noopener" aria-label="Buka MayNote">
+                    <i class="bx bx-link-external text-lg"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="proj-body">
+                <h3 class="proj-title">MayNote</h3>
+                <p class="proj-desc">
+                  Aplikasi pencatatan dengan pencarian, pin catatan, dan penyimpanan file.
+                </p>
+                <div class="proj-tags">
+                  <span>Vue</span><span>TypeScript</span><span>Supabase</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Louwes Store -->
+            <div class="proj-card reveal" style="--d: 0.15s" data-category="landing">
+              <div class="proj-thumb">
+                <img
+                  src="img/louwes-store-800w.webp"
+                  srcset="img/louwes-store-400w.webp 400w, img/louwes-store-800w.webp 800w, img/louwes-store.webp 1600w"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  width="1600"
+                  height="900"
+                  loading="lazy"
+                  alt="Landing page Louwes Store untuk kaos custom dan undangan"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="thumb-fallback" style="display: none">
+                  <i class="bx bx-store text-3xl text-stone-600"></i>
+                </div>
+                <div class="proj-thumb-overlay">
+                  <a href="https://louwes.vercel.app" target="_blank" rel="noopener" aria-label="Buka Louwes Store">
+                    <i class="bx bx-link-external text-lg"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="proj-body">
+                <h3 class="proj-title">Louwes Store</h3>
+                <p class="proj-desc">
+                  Landing page kaos custom dan undangan pernikahan dengan katalog dan order via WhatsApp.
+                </p>
+                <div class="proj-tags">
+                  <span>React 19</span><span>Vite</span><span>Firebase</span><span>Tailwind</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Louwes Admin -->
+            <div class="proj-card reveal" style="--d: 0.2s" data-category="dashboard private">
+              <div class="proj-thumb">
+                <img
+                  src="img/louwes-admin-800w.webp"
+                  srcset="img/louwes-admin-400w.webp 400w, img/louwes-admin-800w.webp 800w, img/louwes-admin.webp 1600w"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  width="1600"
+                  height="900"
+                  loading="lazy"
+                  alt="Halaman manajemen produk Louwes Admin"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="thumb-fallback" style="display: none">
+                  <i class="bx bx-dashboard text-3xl text-stone-600"></i>
+                </div>
+                <div class="proj-thumb-overlay">
+                  <span class="opacity-60 cursor-default flex items-center justify-center w-10 h-10" aria-label="Proyek private">
+                    <i class="bx bx-lock text-lg text-white"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="proj-body">
+                <h3 class="proj-title">
+                  Louwes Admin
+                  <span class="text-xs font-normal text-stone-600 ml-1">Private</span>
+                </h3>
+                <p class="proj-desc">
+                  Manajemen produk, stok, harga, dan status undangan untuk operasional Louwes.
+                </p>
+                <div class="proj-tags">
+                  <span>React 19</span><span>TypeScript</span><span>Firebase</span><span>Cloudinary</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mayoni.Code -->
+            <div class="proj-card reveal" style="--d: 0.25s" data-category="landing">
+              <div class="proj-thumb">
+                <img
+                  src="img/mayoni-code-800w.webp"
+                  srcset="img/mayoni-code-400w.webp 400w, img/mayoni-code-800w.webp 800w, img/mayoni-code.webp 1366w"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  width="1366"
+                  height="768"
+                  loading="lazy"
+                  alt="Landing page Mayoni.Code untuk kursus komputer"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="thumb-fallback" style="display: none">
+                  <i class="bx bx-code-alt text-3xl text-stone-600"></i>
+                </div>
+                <div class="proj-thumb-overlay">
+                  <a href="https://les-komputer.vercel.app" target="_blank" rel="noopener" aria-label="Buka Mayoni.Code">
+                    <i class="bx bx-link-external text-lg"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="proj-body">
+                <h3 class="proj-title">Mayoni.Code</h3>
+                <p class="proj-desc">
+                  Landing page kursus komputer untuk tingkat SD, SMP, dan SMA.
+                </p>
+                <div class="proj-tags">
+                  <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Curriculum Vitae -->
+            <div class="proj-card reveal" style="--d: 0.3s" data-category="web">
+              <div class="proj-thumb">
+                <img
+                  src="img/mayoni-cv-800w.webp"
+                  srcset="img/mayoni-cv-400w.webp 400w, img/mayoni-cv-800w.webp 800w, img/mayoni-cv.webp 1600w"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  width="1600"
+                  height="900"
+                  loading="lazy"
+                  alt="CV digital Dimas Mayoni"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="thumb-fallback" style="display: none">
+                  <i class="bx bx-envelope-open text-3xl text-stone-600"></i>
+                </div>
+                <div class="proj-thumb-overlay">
+                  <a href="https://mayoni-cv.vercel.app/" target="_blank" rel="noopener" aria-label="Buka CV digital">
+                    <i class="bx bx-link-external text-lg"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="proj-body">
+                <h3 class="proj-title">Curriculum Vitae</h3>
+                <p class="proj-desc">
+                  CV digital interaktif dengan desain modern dan ekspor PDF/JPG.
+                </p>
+                <div class="proj-tags">
+                  <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                </div>
               </div>
             </div>
           </div>
@@ -767,6 +1190,34 @@
     <button id="backToTop" class="back-to-top" aria-label="Back to top">
       <i class="bx bx-chevron-up"></i>
     </button>
+
+
+    <!-- ─── CASE STUDY MODAL ─── -->
+    <div class="case-modal" id="caseModal" hidden>
+      <div class="case-modal-backdrop" data-close-modal></div>
+      <div
+        class="case-modal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="caseModalTitle"
+      >
+        <header class="case-modal-head">
+          <div class="min-w-0">
+            <span class="case-modal-eyebrow">Case Study</span>
+            <h2 class="case-modal-title" id="caseModalTitle"></h2>
+          </div>
+          <button
+            type="button"
+            class="case-modal-close"
+            data-close-modal
+            aria-label="Tutup case study"
+          >
+            <i class="bx bx-x"></i>
+          </button>
+        </header>
+        <div class="case-modal-body" id="caseModalBody"></div>
+      </div>
+    </div>
 
     <!-- App JS -->
     <script src="js/app.js"></script>
