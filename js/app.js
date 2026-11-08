@@ -369,7 +369,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const filterBar = document.querySelector(".filter-bar");
     if (!filterBar) return;
     const btns = filterBar.querySelectorAll(".filter-btn");
-    const cards = document.querySelectorAll(".proj-card, .flagship-card");
+    const cards = document.querySelectorAll(".proj-card, .flagship-card, .archive-item");
 
     btns.forEach(function(btn) {
       btn.addEventListener("click", function() {

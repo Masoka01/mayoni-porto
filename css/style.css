@@ -1400,3 +1400,104 @@ footer {
   opacity: 0;
   pointer-events: none;
 }
+
+/* ── Archive list ─────────────────────────── */
+.archive {
+  margin-top: 3rem;
+}
+.archive-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.archive-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+@media (min-width: 768px) {
+  .archive-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.archive-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1px solid #292524;
+  border-radius: 0.75rem;
+  padding: 0.9rem 1rem;
+  background: #0a0a0a;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.light .archive-item {
+  background: #fff;
+  border-color: #e7e5e4;
+}
+.archive-item:hover {
+  border-color: #4f46e5;
+  transform: translateY(-2px);
+}
+.archive-top {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.archive-num {
+  font-family: "Source Code Pro", monospace;
+  font-size: 0.625rem;
+  color: #78716c;
+}
+.light .archive-num {
+  color: #a8a29e;
+}
+.archive-title {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #fafaf9;
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+}
+.light .archive-title {
+  color: #1c1917;
+}
+.archive-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 0.375rem;
+  color: #818cf8;
+  transition: color 0.18s, background 0.18s;
+}
+.archive-link:hover {
+  color: #c7d2fe;
+  background: rgba(79, 70, 229, 0.16);
+}
+.light .archive-link {
+  color: #4f46e5;
+}
+.light .archive-link:hover {
+  color: #4338ca;
+  background: #eef2ff;
+}
+.archive-link.is-locked {
+  color: #78716c;
+  cursor: default;
+  opacity: 0.7;
+}
+.archive-desc {
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: #a8a29e;
+}
+.light .archive-desc {
+  color: #78716c;
+}
+.archive-item .proj-tags {
+  margin-top: auto;
+}
